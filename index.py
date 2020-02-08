@@ -10,9 +10,9 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 args = sys.argv[1]
+splitInput = args.split(" ")
 
-if len(args.split(" ")) > 3:
-    splitInput = args.split(" ")
+if len(splitInput) > 3:
     amount = float(splitInput[0])
     fromC = splitInput[1].upper()
     toC = splitInput[3].upper()
